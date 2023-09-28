@@ -1,6 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query";
+
+// Shared
 import { baseApi } from "shared/api";
+
 import { rootReducers } from "./root-reducers";
 
 const createReduxStore = () => {
