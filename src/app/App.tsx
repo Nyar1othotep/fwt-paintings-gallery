@@ -7,7 +7,5 @@ import { HeaderLayout } from "widgets/header";
 import { Layout } from "shared/ui";
 
 export function App() {
-  return (
-    <Layout headerSlot={<HeaderLayout />} contentSlot={<HeaderLayout />} />
-  );
+  return <Layout headerSlot={<HeaderLayout />} contentSlot={null} />;
 }
