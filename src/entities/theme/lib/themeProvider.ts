@@ -1,12 +1,17 @@
-import { ReactNode, useEffect } from "react";
-import { useTheme } from "../model/selectors";
+import { useEffect } from "react";
+import type { ReactNode } from "react";
+
+// Shared
+import { useAppSelector } from "shared/lib";
+
+import { selectTheme } from "../model/slice";
 
 type TypeChildren = {
   children: ReactNode;
 };
 
 export function ThemeProvider({ children }: TypeChildren) {
-  const theme = useTheme();
+  const theme = useAppSelector(selectTheme);
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;

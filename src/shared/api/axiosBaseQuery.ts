@@ -1,4 +1,4 @@
-import { type BaseQueryFn } from "@reduxjs/toolkit/dist/query/baseQueryTypes";
+import type { BaseQueryFn } from "@reduxjs/toolkit/dist/query/baseQueryTypes";
 
 import type { AxiosError, AxiosRequestConfig } from "axios";
 import axios from "axios";

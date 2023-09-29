@@ -1,9 +1,12 @@
-import { type PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
 
 import { TypeTheme } from "./types";
 
 const initialState = {
-  theme: window.matchMedia(`(prefers-color-scheme: light)`) ? "light" : "dark",
+  theme: window.matchMedia(`(prefers-color-scheme: dark)`).matches
+    ? "light"
+    : "dark",
 };
 
 const themeSlice = createSlice({
@@ -16,5 +19,6 @@ const themeSlice = createSlice({
   },
 });
 
+export const selectTheme = (state: RootState) => state.theme.theme;
 export const { changeTheme } = themeSlice.actions;
 export const { reducer } = themeSlice;

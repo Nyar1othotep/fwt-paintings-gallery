@@ -1,13 +1,17 @@
+import React from "react";
 import { useDispatch } from "react-redux";
 
 // Entities
-import { changeTheme, useTheme } from "entities/theme";
+import { changeTheme, selectTheme } from "entities/theme";
+
+// Shared
+import { useAppSelector } from "shared/lib";
 
 import styles from "./HeaderLayout.module.scss";
 
 export function HeaderLayout() {
   const dispatch = useDispatch();
-  const theme = useTheme();
+  const theme = useAppSelector(selectTheme);
 
   const handleClick = () => {
     dispatch(changeTheme(theme === "light" ? "dark" : "light"));
