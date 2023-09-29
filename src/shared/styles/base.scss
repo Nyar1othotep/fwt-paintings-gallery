@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+button {
+  border: none;
+  background: none;
+}
+
 #root {
   max-width: 1150px;
   margin: 0 auto;

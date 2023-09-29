@@ -1,0 +1,12 @@
+.wrapper {
+  margin: -5px;
+  padding: 5px;
+  display: flex;
+  cursor: pointer;
+}
+
+.svg {
+  width: 24px;
+  height: 24px;
+  fill: var(--svg-color);
+}
