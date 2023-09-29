@@ -13,8 +13,7 @@ type Props = {
   contentSlot: ReactNode;
 };
 
-export function Layout(props: Props) {
-  const { headerSlot, contentSlot } = props;
+export function Layout({ headerSlot, contentSlot }: Props) {
   return (
     <div className={styles.root}>
       {headerSlot}

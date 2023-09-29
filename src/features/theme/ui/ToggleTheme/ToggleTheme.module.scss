@@ -3,6 +3,10 @@
   padding: 5px;
   display: flex;
   cursor: pointer;
+
+  &:hover .svg {
+    fill: var(--color-grey);
+  }
 }
 
 .svg {
