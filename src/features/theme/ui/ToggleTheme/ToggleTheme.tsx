@@ -1,4 +1,3 @@
-import React from "react";
 import cn from "classnames";
 
 // Entities
@@ -10,11 +9,11 @@ import { useAppDispatch, useAppSelector } from "shared/lib";
 import { ReactComponent as Icon } from "../assets/theme.svg";
 import styles from "./ToggleTheme.module.scss";
 
-type TypeProps = {
+interface IToggleTheme {
   className: string;
-};
+}
 
-export function ToggleTheme({ className }: TypeProps) {
+export function ToggleTheme({ className }: IToggleTheme) {
   const dispatch = useAppDispatch();
   const theme = useAppSelector(selectTheme);
 

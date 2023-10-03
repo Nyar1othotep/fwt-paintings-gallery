@@ -3,12 +3,12 @@ import cn from "classnames";
 
 import styles from "./Input.module.scss";
 
-type TypeProps = {
+interface IInput {
   initValue?: string;
   placeholder?: string;
-};
+}
 
-export function Input({ initValue, placeholder }: TypeProps) {
+export function Input({ initValue, placeholder }: IInput) {
   const [value, setValue] = useState<string>(initValue || "");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

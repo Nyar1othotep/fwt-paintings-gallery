@@ -1,7 +1,13 @@
 @import url("./colors.scss");
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
 }
 
 button {
@@ -16,10 +22,14 @@ button {
 }
 
 body {
-  margin: 0;
-  padding: 0;
   background: var(--background-color);
   color: var(--text-color);
+}
+
+.text-collapse {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 h1 {

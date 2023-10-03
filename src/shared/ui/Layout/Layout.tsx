@@ -8,12 +8,12 @@ import styles from "./Layout.module.scss";
  * По задание его нет, но думаю это хорошая практика
  */
 
-type Props = {
+interface ILayout {
   headerSlot: ReactNode;
   contentSlot: ReactNode;
-};
+}
 
-export function Layout({ headerSlot, contentSlot }: Props) {
+export function Layout({ headerSlot, contentSlot }: ILayout) {
   return (
     <div className={styles.root}>
       {headerSlot}

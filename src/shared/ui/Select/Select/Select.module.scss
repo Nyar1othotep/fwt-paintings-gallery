@@ -1,0 +1,52 @@
+@import "../../../styles/variables.scss";
+
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.select {
+  width: 100%;
+  min-height: 45px;
+  padding: 0px 18px 0px 15px;
+  display: flex;
+  align-items: center;
+  color: var(--color-light-grey);
+  border: 1px solid var(--color-light-grey);
+  border-radius: $border-radius;
+  background: var(--secondary-background-color);
+  gap: 10px;
+
+  &.active {
+    color: var(--text-color);
+    border: 1px solid var(--border-focus-color);
+    border-bottom: 1px solid var(--color-light-grey);
+    border-radius: $border-radius $border-radius 0px 0px;
+
+    &:hover {
+      border-bottom: 1px solid var(--color-light-grey);
+    }
+  }
+
+  &:hover {
+    color: var(--text-color);
+    border: 1px solid var(--border-focus-color);
+  }
+}
+
+.icon {
+  margin-left: auto;
+  display: flex;
+
+  svg {
+    width: 10px;
+    height: 6px;
+    fill: var(--color-light-grey);
+  }
+
+  &.active svg {
+    transform: rotate(180deg);
+  }
+}

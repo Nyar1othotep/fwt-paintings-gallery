@@ -1,5 +1,3 @@
-import React from "react";
-
 // Widgets
 import { HeaderLayout } from "widgets/header";
 

@@ -20,6 +20,7 @@
     "react-scripts": "5.0.1",
     "redux": "^4.2.1",
     "sass": "^1.68.0",
+    "simplebar-react": "^3.2.4",
     "typescript": "^5.0.4",
     "web-vitals": "^2.1.4"
   },
