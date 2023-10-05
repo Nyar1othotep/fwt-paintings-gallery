@@ -1,4 +1,3 @@
-import cn from "classnames";
 import SimpleBar from "simplebar-react";
 
 import "./SimpleBar.scss";
@@ -6,29 +5,27 @@ import styles from "./OptionsList.module.scss";
 
 type TOption = {
   id: number;
-  name: string;
+  name?: string;
+  location?: string;
 };
 
 interface IOptionsList {
   options: TOption[];
-  isOpen: boolean;
-  onChange: (newValue: string) => void;
+  onChange: (option: TOption) => void;
 }
 
-export function OptionsList({ options, isOpen, onChange }: IOptionsList) {
+export function OptionsList({ options, onChange }: IOptionsList) {
   return (
-    <SimpleBar
-      className={cn(styles.optionsContainer, { [styles.active]: isOpen })}
-    >
+    <SimpleBar className={styles.root}>
       <ul className={styles.options}>
         {options.map((option) => (
           <li
             key={option.id}
             className={styles.option}
-            onClick={() => onChange(option.name)}
+            onClick={() => onChange(option)}
             aria-hidden="true"
           >
-            <h2 className="text-collapse">{option.name}</h2>
+            <h2 className="text-collapse">{option.name || option.location!}</h2>
           </li>
         ))}
       </ul>

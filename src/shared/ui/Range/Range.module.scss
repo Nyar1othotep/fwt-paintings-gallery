@@ -1,0 +1,40 @@
+@import "shared/styles/breakpoints.scss";
+
+.root {
+  padding: 20px 22px 22px 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  input {
+    max-width: 110px;
+    border: none;
+    background: var(--color-white-grey);
+  }
+
+  hr {
+    min-width: 12px;
+    height: 1px;
+    background: var(--primary-color);
+    order: 1;
+  }
+
+  & > input:first-child {
+    order: 0;
+  }
+
+  & > input:last-child {
+    order: 2;
+  }
+
+  @media (max-width: $m-viewport) {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  @media (max-width: $s-viewport) {
+    padding: 20px 17.5px 20px 17.5px;
+    flex-direction: row;
+    gap: 7px;
+  }
+}

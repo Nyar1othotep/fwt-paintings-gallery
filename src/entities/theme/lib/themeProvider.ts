@@ -1,16 +1,15 @@
-import { useEffect } from "react";
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 
 // Shared
 import { useAppSelector } from "shared/lib";
 
 import { selectTheme } from "../model/slice";
 
-type TypeChildren = {
+interface IChildren {
   children: ReactNode;
-};
+}
 
-export function ThemeProvider({ children }: TypeChildren) {
+export function ThemeProvider({ children }: IChildren) {
   const theme = useAppSelector(selectTheme);
 
   useEffect(() => {

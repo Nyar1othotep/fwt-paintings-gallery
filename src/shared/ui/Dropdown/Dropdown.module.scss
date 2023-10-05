@@ -1,4 +1,4 @@
-@import "../../../styles/variables.scss";
+@import "shared/styles/variables.scss";
 
 .root {
   position: relative;
@@ -7,7 +7,7 @@
   cursor: pointer;
 }
 
-.select {
+.dropdown {
   width: 100%;
   min-height: 45px;
   padding: 0px 18px 0px 15px;
@@ -20,8 +20,8 @@
   gap: 10px;
 
   &.active {
-    color: var(--text-color);
-    border: 1px solid var(--border-focus-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
     border-bottom: 1px solid var(--color-light-grey);
     border-radius: $border-radius $border-radius 0px 0px;
 
@@ -31,8 +31,25 @@
   }
 
   &:hover {
-    color: var(--text-color);
-    border: 1px solid var(--border-focus-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+  }
+}
+
+.content {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 100%;
+  display: none;
+  border: 1px solid var(--primary-color);
+  border-top: none;
+  border-radius: 0px 0px $border-radius $border-radius;
+  background: var(--secondary-background-color);
+  z-index: 10;
+
+  &.active {
+    display: block;
   }
 }
 

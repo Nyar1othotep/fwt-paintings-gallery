@@ -1,22 +1,8 @@
-@import "../../../styles/variables.scss";
-@import "../../../styles/breakpoints.scss";
+@import "shared/styles/variables.scss";
+@import "shared/styles/breakpoints.scss";
 
-.optionsContainer {
-  position: absolute;
-  top: 45px;
-  left: 0;
-  width: 100%;
+.root {
   max-height: 300px;
-  display: none;
-  border: 1px solid var(--border-focus-color);
-  border-top: none;
-  border-radius: 0px 0px $border-radius $border-radius;
-  background: var(--secondary-background-color);
-  z-index: 10;
-
-  &.active {
-    display: block;
-  }
 }
 
 .options {
@@ -33,7 +19,7 @@
   padding: 11px 19px 11px 22px;
 
   &:hover {
-    color: var(--inverse-text-color);
+    color: var(--inverse-primary-color);
     background: var(--inverse-background-color);
   }
 
