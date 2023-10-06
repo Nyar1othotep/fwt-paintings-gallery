@@ -3,11 +3,11 @@ import { store } from "../src/app";
 /**
  * @remark
  *
- * Во Feature-Sliced Design не допускается импорт из вышестоящего слоя
- * Так, в shared/lib/hooks/reduxHooks по документацией Redux:
+ * В Feature-Sliced Design не допускается импорт из вышестоящего слоя.
+ * Так, в shared/lib/hooks/reduxHooks я был вынужден импортировать RootState
+ * и AppDispatch из app:
  * https://redux.js.org/usage/usage-with-typescript#define-typed-hooks
  *
- * я был вынужден импортировать RootState и AppDispatch из app
  * Чтобы этого избежать, я решил сделать их глобальными
  */
 

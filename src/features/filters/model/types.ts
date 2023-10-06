@@ -1,6 +1,6 @@
 export type TSelect = {
   initValue?: string;
-  onChange: (option: number) => void;
+  onChange: (option: number | string) => void;
 };
 
 export type TFilters = {

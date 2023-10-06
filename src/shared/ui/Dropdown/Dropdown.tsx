@@ -9,6 +9,7 @@ interface IDropdown {
   initValue?: string;
   forceValue?: string;
   forceClose?: boolean;
+  actionSlot?: ReactNode;
   contentSlot?: ReactNode;
 }
 
@@ -16,6 +17,7 @@ export function Dropdown({
   initValue,
   forceValue,
   forceClose,
+  actionSlot,
   contentSlot,
 }: IDropdown) {
   const [value, setValue] = useState(initValue || "");
@@ -45,8 +47,12 @@ export function Dropdown({
         <div className={cn(styles.title, "placeholder text-collapse")}>
           {value}
         </div>
-        <div className={cn(styles.icon, { [styles.active]: isOpen })}>
-          <Icon />
+        <div className={styles.icons}>
+          {actionSlot && value !== initValue && actionSlot}
+
+          <div className={cn(styles.icon, { [styles.active]: isOpen })}>
+            <Icon />
+          </div>
         </div>
       </div>
       <div className={cn(styles.content, { [styles.active]: isOpen })}>

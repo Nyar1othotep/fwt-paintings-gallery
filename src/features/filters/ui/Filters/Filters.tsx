@@ -12,6 +12,8 @@ export function Filters() {
   const dispatch = useAppDispatch();
 
   const handleFilters = (filter: { [key: string]: string | number }) => {
+    console.log(filter);
+
     dispatch(setFilters(filter));
   };
 
