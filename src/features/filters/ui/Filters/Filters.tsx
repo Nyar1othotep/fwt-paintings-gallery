@@ -11,9 +11,7 @@ import styles from "./Filters.module.scss";
 export function Filters() {
   const dispatch = useAppDispatch();
 
-  const handleFilters = (filter: { [key: string]: string | number }) => {
-    console.log(filter);
-
+  const handleFilters = (filter: { [key: string]: string | number | null }) => {
     dispatch(setFilters(filter));
   };
 
@@ -30,7 +28,7 @@ export function Filters() {
             initValue={initValue}
             placeholder={placeholder}
             contentSlot={subFilters && renderFilters(subFilters)}
-            onChange={(value: string | number) =>
+            onChange={(value: string | number | null) =>
               handleFilters({ [name]: value })
             }
           />

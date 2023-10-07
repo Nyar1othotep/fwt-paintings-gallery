@@ -5,8 +5,7 @@ import styles from "./OptionsList.module.scss";
 
 type TOption = {
   id: number;
-  name?: string;
-  location?: string;
+  name: string;
 };
 
 interface IOptionsList {
@@ -25,7 +24,7 @@ export function OptionsList({ options, onChange }: IOptionsList) {
             onClick={() => onChange(option)}
             aria-hidden="true"
           >
-            <h2 className="text-collapse">{option.name || option.location!}</h2>
+            <h2 className="text-collapse">{option.name}</h2>
           </li>
         ))}
       </ul>

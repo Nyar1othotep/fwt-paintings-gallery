@@ -6,7 +6,7 @@ import styles from "./Input.module.scss";
 interface IInput {
   initValue?: string;
   placeholder?: string;
-  onChange: (value: string) => void;
+  onChange: (value: string | null) => void;
 }
 
 export function Input({ initValue, placeholder, onChange }: IInput) {
@@ -21,7 +21,7 @@ export function Input({ initValue, placeholder, onChange }: IInput) {
 
   const handleKey = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      onChange(value);
+      onChange(value || null);
     }
   };
 

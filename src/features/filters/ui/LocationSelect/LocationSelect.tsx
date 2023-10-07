@@ -4,9 +4,12 @@ import { useGetLocationsQuery } from "entities/filters";
 // Shared
 import { Select } from "shared/ui";
 
-import type { TSelect } from "../../model/types";
+interface ISelect {
+  initValue?: string;
+  onChange: (option: number | null) => void;
+}
 
-export function LocationSelect({ initValue, onChange }: TSelect) {
+export function LocationSelect({ initValue, onChange }: ISelect) {
   const { data: locations, isSuccess } = useGetLocationsQuery({});
 
   return (

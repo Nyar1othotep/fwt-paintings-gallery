@@ -7,15 +7,14 @@ import styles from "./Select.module.scss";
 
 type TOption = {
   id: number;
-  name?: string;
-  location?: string;
+  name: string;
 };
 
 interface ISelect {
   initValue?: string;
   status?: boolean;
-  options: TOption[];
-  onChange: (option: number | string) => void;
+  options: any;
+  onChange: (option: number | null) => void;
 }
 
 export function Select({
@@ -32,7 +31,7 @@ export function Select({
   };
 
   const handleOption = (option: TOption) => {
-    setValue(option.name || option.location!);
+    setValue(option.name);
     onChange(option.id);
     closeDropdown();
   };
@@ -40,7 +39,7 @@ export function Select({
   const handleAction = (e: MouseEvent | TouchEvent) => {
     e.stopPropagation();
     setValue(initValue || "");
-    onChange("");
+    onChange(null);
   };
 
   return (

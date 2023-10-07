@@ -7,17 +7,17 @@ import { TFilters } from "../model/types";
 
 export const filters: TFilters[] = [
   {
-    name: "name",
+    name: "q",
     component: "Input",
     placeholder: "Name",
   },
   {
-    name: "author",
+    name: "authorId",
     component: "AuthorSelect",
     initValue: "Author",
   },
   {
-    name: "location",
+    name: "locationId",
     component: "LocationSelect",
     initValue: "Location",
   },
@@ -27,12 +27,12 @@ export const filters: TFilters[] = [
     initValue: "Created",
     subFilters: [
       {
-        name: "from",
+        name: "created_gte",
         component: "Input",
         placeholder: "from",
       },
       {
-        name: "before",
+        name: "created_lte",
         component: "Input",
         placeholder: "before",
       },

@@ -1,6 +1,7 @@
-export { useGetAuthorsQuery, useGetLocationsQuery } from "./model/filtersApi";
+export { useGetAuthorsQuery, useGetLocationsQuery } from "./api/filtersApi";
 export {
   setFilters,
   resetFilters,
+  selectFilters,
   reducer as FiltersReducer,
 } from "./model/slice";
