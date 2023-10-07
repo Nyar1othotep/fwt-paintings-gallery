@@ -34,6 +34,7 @@
 
   @media (max-width: $s-viewport) {
     padding: 20px 17.5px 20px 17.5px;
+    justify-content: center;
     flex-direction: row;
     gap: 7px;
   }

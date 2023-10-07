@@ -8,15 +8,23 @@ import {
 
 // Shared
 import { useAppSelector } from "@/shared/lib";
+import { Spinner } from "@/shared/ui";
 
 import { PaintingsList } from "../PaintingsList/PaintingsList";
 
 export function PaintingsLayout() {
   const filters = useAppSelector(selectFilters);
-  const { data: paintings, isSuccess: isPSuccess } =
-    useGetPaintingsQuery(filters);
+  const {
+    data: paintings,
+    isSuccess: isPSuccess,
+    isFetching,
+  } = useGetPaintingsQuery(filters);
   const { data: authors, isSuccess: isASuccess } = useGetAuthorsQuery({});
   const { data: locations, isSuccess: isLSuccess } = useGetLocationsQuery({});
+
+  if (isFetching) {
+    return <Spinner />;
+  }
 
   if (isPSuccess && isASuccess && isLSuccess) {
     const mappedPaintings = mapPaintings({
