@@ -1,5 +1,5 @@
 // Shared
-import { Input, Range } from "shared/ui";
+import { Input, Range } from "@/shared/ui";
 
 import { AuthorSelect } from "../ui/AuthorSelect/AuthorSelect";
 import { LocationSelect } from "../ui/LocationSelect/LocationSelect";

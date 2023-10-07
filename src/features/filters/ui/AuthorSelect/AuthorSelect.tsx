@@ -1,8 +1,8 @@
 // Entities
-import { useGetAuthorsQuery } from "entities/filters";
+import { useGetAuthorsQuery } from "@/entities/filters";
 
 // Shared
-import { Select } from "shared/ui";
+import { Select } from "@/shared/ui";
 
 interface ISelect {
   initValue?: string;

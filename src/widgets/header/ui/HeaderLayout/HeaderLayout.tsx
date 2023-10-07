@@ -1,15 +1,15 @@
 // Entities
-import { useGetPaintingsQuery, transformResponse } from "entities/paintings";
+import { useGetPaintingsQuery, transformResponse } from "@/entities/paintings";
 import {
   selectFilters,
   useGetAuthorsQuery,
   useGetLocationsQuery,
-} from "entities/filters";
+} from "@/entities/filters";
 
 // Features
-import { ToggleTheme } from "features/theme";
+import { ToggleTheme } from "@/features/theme";
 
-import { useAppSelector } from "shared/lib";
+import { useAppSelector } from "@/shared/lib";
 
 import styles from "./HeaderLayout.module.scss";
 
@@ -29,7 +29,7 @@ export function HeaderLayout() {
       <a href="https://framework.team/">
         <img
           className={styles.logo}
-          src="/fwt-paintings-gallery/images/logo.png"
+          src="/images/logo.png"
           alt="Logo FWT-Framework team"
         />
       </a>

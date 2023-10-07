@@ -1,7 +1,7 @@
 import { useEffect, type ReactNode } from "react";
 
 // Shared
-import { useAppSelector } from "shared/lib";
+import { useAppSelector } from "@/shared/lib";
 
 import { selectTheme } from "../model/slice";
 

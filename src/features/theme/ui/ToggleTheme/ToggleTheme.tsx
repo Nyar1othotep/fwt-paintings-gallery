@@ -7,6 +7,7 @@ import { changeTheme, selectTheme } from "entities/theme";
 import { useAppDispatch, useAppSelector } from "shared/lib";
 
 import { ReactComponent as Icon } from "../assets/theme.svg";
+
 import styles from "./ToggleTheme.module.scss";
 
 interface IToggleTheme {

@@ -1,4 +1,4 @@
-import { baseApi } from "shared/api";
+import { baseApi } from "@/shared/api";
 
 import { transformResponse } from "../lib/transformResponse";
 import type { TDto, TLocation } from "../model/types";
