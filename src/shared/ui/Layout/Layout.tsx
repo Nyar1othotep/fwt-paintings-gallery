@@ -18,9 +18,9 @@ export function Layout({ headerSlot, contentSlot }: ILayout) {
   return (
     <div className={styles.root}>
       {headerSlot}
-      <div className={styles.container}>
+      <main className={styles.container}>
         <div className={styles.content}>{contentSlot}</div>
-      </div>
+      </main>
     </div>
   );
 }

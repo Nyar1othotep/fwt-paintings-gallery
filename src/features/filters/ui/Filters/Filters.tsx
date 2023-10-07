@@ -39,5 +39,5 @@ export function Filters() {
 
   const elements = renderFilters(filters);
 
-  return <div className={styles.root}>{elements}</div>;
+  return <section className={styles.root}>{elements}</section>;
 }

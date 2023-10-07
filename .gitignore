@@ -11,6 +11,7 @@
 # production
 /build
 /dist
+analyse.html
 
 # misc
 .DS_Store

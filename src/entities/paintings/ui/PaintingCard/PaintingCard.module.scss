@@ -1,0 +1,61 @@
+@import "@/shared/styles/variables.scss";
+
+.root {
+  position: relative;
+  border-radius: $card-border-radius;
+  color: var(--color-black);
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    .content {
+      bottom: 0;
+    }
+  }
+}
+
+.img {
+  position: relative;
+  display: block;
+  padding: 0px 0px 76.38% 0px;
+
+  img {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  bottom: calc(-53% + 30px);
+  width: 100%;
+  height: 53%;
+  padding: 5px 0px 0px 15px;
+  background-color: var(--alternate-background-color);
+  z-index: 2;
+
+  h1 {
+    margin: 0px 0px 6px 0px;
+  }
+}
+
+.list {
+  & > *:not(:last-child) {
+    margin: 0px 0px 5px 0px;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    h3 {
+      margin: 0px 4px 0px 0px;
+    }
+  }
+}

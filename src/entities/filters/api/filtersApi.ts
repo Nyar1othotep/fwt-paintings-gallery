@@ -1,6 +1,6 @@
 import { baseApi } from "@/shared/api";
 
-import { transformResponse } from "../lib/transformResponse";
+import { mapLocations } from "../lib/mapLocations";
 import type { TDto, TLocation } from "../model/types";
 
 export const filtersApi = baseApi.injectEndpoints({
@@ -10,7 +10,7 @@ export const filtersApi = baseApi.injectEndpoints({
     }),
     getLocations: build.query<TDto[], object>({
       query: () => ({ url: "/locations", method: "get" }),
-      transformResponse: (response: TLocation[]) => transformResponse(response),
+      transformResponse: (response: TLocation[]) => mapLocations(response),
     }),
   }),
 });

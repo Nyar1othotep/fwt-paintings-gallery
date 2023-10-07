@@ -1,4 +1,11 @@
 @import url("./colors.scss");
+@import url("./fonts.scss");
+
+:root {
+  font-family: "Roboto", Avenir, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizelegibility;
+}
 
 * {
   margin: 0;
@@ -35,7 +42,7 @@ body {
 h1 {
   // for card title
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h2 {

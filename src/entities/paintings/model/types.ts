@@ -1,8 +1,19 @@
 export type TDto = {
-  authorId: number;
+  authorId: number | string;
   created: string;
-  id: number;
+  id?: number;
   imageUrl: string;
-  locationId: number;
+  locationId: number | string;
   name: string;
+};
+
+export type TOtherDto = {
+  id: number;
+  name: string;
+};
+
+export type TData = {
+  paintings: TDto[];
+  authors: TOtherDto[];
+  locations: TOtherDto[];
 };

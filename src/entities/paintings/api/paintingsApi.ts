@@ -4,7 +4,7 @@ import { TDto } from "../model/types";
 
 export const paintingsApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
-    getPaintings: build.query<TDto[], object>({
+    getPaintings: build.query<{ data: TDto[]; totalCount: number }, object>({
       query: (filters) => ({
         url: "/paintings",
         method: "get",
