@@ -19,6 +19,7 @@ export function PaintingsLayout() {
     data: paintings,
     isSuccess: isPSuccess,
     isFetching,
+    isError,
   } = useGetPaintingsQuery(filters);
   const { data: authors, isSuccess: isASuccess } = useGetAuthorsQuery({});
   const { data: locations, isSuccess: isLSuccess } = useGetLocationsQuery({});
@@ -26,6 +27,12 @@ export function PaintingsLayout() {
   if (isFetching) {
     return <Spinner />;
   }
+
+  if (isError)
+    return <div>Упс... Что-то пошло не так. Перезагрузите страницу</div>;
+
+  if (Array.isArray(paintings) && paintings.length === 0)
+    return <div>Данных нет. Попробуйте ввести другие фильтры.</div>;
 
   if (isPSuccess && isASuccess && isLSuccess) {
     const mappedPaintings = mapPaintings({
