@@ -4,8 +4,12 @@
   width: 100%;
   min-height: 45px;
   padding: 0px 0px 0px 15px;
-  color: var(--color-light-grey);
+  color: var(--primary-color);
   border: 1px solid var(--border-color);
   border-radius: $border-radius;
   background: var(--secondary-background-color);
+
+  &::placeholder {
+    color: var(--color-light-grey);
+  }
 }

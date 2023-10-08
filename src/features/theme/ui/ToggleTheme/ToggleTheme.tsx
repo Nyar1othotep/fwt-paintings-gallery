@@ -24,7 +24,12 @@ export function ToggleTheme({ className }: IToggleTheme) {
 
   return (
     <div className={cn(styles.root, className)}>
-      <button className={styles.wrapper} onClick={handleClick} type="button">
+      <button
+        className={styles.wrapper}
+        onClick={handleClick}
+        type="button"
+        aria-label={`Switch between dark and light mode. Current mode: ${theme}`}
+      >
         <Icon className={styles.svg} />
       </button>
     </div>

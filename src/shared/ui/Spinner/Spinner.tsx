@@ -19,7 +19,7 @@ export function Spinner({ className, width = 50, height = 50 }: ISpinner) {
         }}
       >
         <div className={styles.wrapper}>
-          <div></div>
+          <div />
         </div>
       </div>
     </div>

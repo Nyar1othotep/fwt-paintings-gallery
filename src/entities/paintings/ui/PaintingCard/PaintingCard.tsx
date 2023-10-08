@@ -1,5 +1,9 @@
 import { useInView } from "react-intersection-observer";
 
+// Shared
+import { IMAGE_CND_URL } from "@/shared/config";
+import { Image } from "@/shared/ui";
+
 import { useBreakpoint } from "../../lib/useBreakpoint";
 import type { TDto } from "../../model/types";
 import styles from "./PaintingCard.module.scss";
@@ -22,22 +26,27 @@ export function PaintingCard({
     <li ref={ref} className={styles.root}>
       <div className={styles.img}>
         {inView && (
-          <img src={imageUrl} alt={name} width="360px" height="275px" />
+          <Image
+            imageUrl={`${IMAGE_CND_URL + imageUrl}?tr=w-360,h-275`}
+            alt={name}
+            width={360}
+            height={275}
+          />
         )}
       </div>
       <div className={styles.content}>
         <h1 className="text-collapse">{name}</h1>
         <ul className={styles.list}>
           <li>
-            <h3>Author:</h3>
+            <div className="subtitle">Author:</div>
             <span className="text-collapse">{authorId}</span>
           </li>
           <li>
-            <h3>Created:</h3>
+            <div className="subtitle">Created:</div>
             <span className="text-collapse">{created}</span>
           </li>
           <li>
-            <h3>Location:</h3>
+            <div className="subtitle">Location:</div>
             <span className="text-collapse">{locationId}</span>
           </li>
         </ul>

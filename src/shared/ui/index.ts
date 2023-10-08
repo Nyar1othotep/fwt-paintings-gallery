@@ -3,3 +3,4 @@ export { Input } from "./Input/Input";
 export { Select } from "./Select/Select/Select";
 export { Range } from "./Range/Range";
 export { Spinner } from "./Spinner/Spinner";
+export { Image } from "./Image/Image";
