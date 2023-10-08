@@ -6,6 +6,7 @@
   --inverse-background-color: #000000;
   --secondary-background-color: #ffffff;
   --alternate-background-color: rgba(255, 255, 255, 0.75);
+  --pagination-background: #ededed;
 
   --color-white: #ffffff;
   --color-black: #000000;
@@ -21,6 +22,7 @@
   --background-color: #ffffff;
   --inverse-background-color: #000000;
   --secondary-background-color: #ffffff;
+  --pagination-background: #ededed;
 }
 
 :root[data-theme="dark"] {
@@ -30,4 +32,5 @@
   --background-color: #000000;
   --inverse-background-color: #ffffff;
   --secondary-background-color: #0c0c0c;
+  --pagination-background: #464646;
 }

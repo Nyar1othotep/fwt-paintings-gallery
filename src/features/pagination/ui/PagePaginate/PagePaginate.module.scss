@@ -1,0 +1,74 @@
+@import "@/shared/styles/variables.scss";
+
+.root {
+  margin-left: 0;
+}
+
+.list {
+  display: inline-flex;
+  align-content: center;
+
+  a {
+    display: flex;
+    color: var(--primary-color);
+  }
+
+  svg {
+    width: 13.5px;
+    height: 13px;
+    fill: var(--primary-color);
+  }
+}
+
+.item {
+  a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--primary-color);
+    border-right: none;
+  }
+
+  &:hover:not(.disabled, .active) a {
+    background: var(--pagination-background);
+  }
+}
+
+.firstItem {
+  a {
+    border-radius: $border-radius 0px 0px $border-radius;
+  }
+}
+
+.lastItem {
+  a {
+    border-radius: 0px $border-radius $border-radius 0px;
+    border-right: 1px solid;
+  }
+}
+
+.prevSvg {
+  transform: rotate(-180deg);
+}
+
+.arrowSvg {
+  width: 9px !important;
+}
+
+.active {
+  a {
+    background: var(--inverse-background-color);
+    color: var(--inverse-primary-color);
+  }
+}
+
+.disabled {
+  a {
+    border-color: var(--color-light-grey);
+  }
+  svg {
+    fill: var(--color-light-grey);
+  }
+}

@@ -5,6 +5,7 @@ import {
   useGetAuthorsQuery,
   useGetLocationsQuery,
 } from "@/entities/filters";
+import { PagePaginate } from "@/features/pagination";
 
 // Shared
 import { useAppSelector } from "@/shared/lib";
@@ -33,6 +34,11 @@ export function PaintingsLayout() {
       locations,
     });
 
-    return <PaintingsList paintings={mappedPaintings} />;
+    return (
+      <>
+        <PaintingsList paintings={mappedPaintings} />
+        <PagePaginate totalCount={paintings.totalCount} />
+      </>
+    );
   }
 }

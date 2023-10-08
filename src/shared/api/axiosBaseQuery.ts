@@ -19,7 +19,7 @@ export const axiosBaseQuery =
   async ({ url, method, data, params }) => {
     try {
       const result = await axios({ url: baseUrl + url, method, data, params });
-      const totalCount = result.headers["x-total-count"];
+      const totalCount = +result.headers["x-total-count"];
 
       if (totalCount) return { data: { data: result.data, totalCount } };
 
