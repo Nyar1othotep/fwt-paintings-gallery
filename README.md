@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# FWT Paintings gallery
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Простой сайт, реализованный для компании Framework Team.
 
-## Available Scripts
+[![FSD][fsd]][fsd-url] [![Vite][Vite]][Vite-url] [![React][react.js]][react-url] [![TypeScript][TypeScript]][TypeScript-url] [![Redux][redux]][redux-url] [![SASS][SASS]][SASS-url]
 
-In the project directory, you can run:
+## Превью
 
-### `npm start`
+<img src="https://github.com/Nyar1othotep/fwt-paintings-gallery/assets/88327370/9ef631ab-536d-49a6-86b9-45e5442af1fe" alt="preview" />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<h3><a href="https://nyar1othotep.github.io/fwt-paintings-gallery/">Live Demo</a></h2>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Локальный запуск
 
-### `npm test`
+1. Копировать `.env.example` в `.env`
+2. В терминале:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```
+   npm install
+   npm start
+   ```
 
-### `npm run build`
+3. Проверка ESLint:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```
+   npm run lint
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Визуализатор модулей:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```
+   npm run build
+   ```
 
-### `npm run eject`
+   Появится файл **"analyse.html"**.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Контакты
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **[ВКонтакте - Минин Максим](https://vk.com/astra_earth)**
+2. **Почта: nyarlothotephoro@gmail.com**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[fsd]: https://img.shields.io/badge/Feature--Sliced-Design?style=for-the-badge&color=3b3839&labelColor=3b3839&logoWidth=10&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAaCAYAAAC3g3x9AAAACXBIWXMAAALFAAACxQGJ1n/vAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABISURBVHgB7dKxCQAgDETR0w2cws0cys2cwhEUBbsggikCuVekDHwSQFlYo7Q+8KnmtHdFWMdk2cl5wSsbxGSZw8dm8pX9ZHUTMBUgGU2F718AAAAASUVORK5CYII=
+[fsd-url]: https://feature-sliced.design/
+[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/
+[redux]: https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white
+[redux-url]: https://redux.js.org/
+[SASS]: https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white
+[SASS-url]: https://sass-lang.com/
+[Vite]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
+[Vite-url]: https://vitejs.dev/
+[TypeScript]: https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white
+[TypeScript-url]: https://www.typescriptlang.org/

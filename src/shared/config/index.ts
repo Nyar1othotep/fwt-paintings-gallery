@@ -6,4 +6,4 @@ const getEnvVar = (key: string) => {
 };
 
 export const API_URL = getEnvVar("REACT_APP_API_URL") as string;
-export const IMAGE_CND_URL = getEnvVar("REACT_APP_IMAGE_CND_URL") as string;
+export const IMAGE_CDN_URL = getEnvVar("REACT_APP_IMAGE_CDN_URL") as string;

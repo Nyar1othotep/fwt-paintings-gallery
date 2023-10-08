@@ -1,7 +1,7 @@
 import { useInView } from "react-intersection-observer";
 
 // Shared
-import { IMAGE_CND_URL } from "@/shared/config";
+import { IMAGE_CDN_URL } from "@/shared/config";
 import { Image } from "@/shared/ui";
 
 import { useBreakpoint } from "../../lib/useBreakpoint";
@@ -27,7 +27,7 @@ export function PaintingCard({
       <div className={styles.img}>
         {inView && (
           <Image
-            imageUrl={`${IMAGE_CND_URL + imageUrl}?tr=w-360,h-275`}
+            imageUrl={`${IMAGE_CDN_URL + imageUrl}?tr=w-360,h-275`}
             alt={name}
             width={360}
             height={275}
