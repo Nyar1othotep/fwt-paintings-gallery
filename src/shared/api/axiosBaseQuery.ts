@@ -1,6 +1,6 @@
 import type { BaseQueryFn } from "@reduxjs/toolkit/dist/query/baseQueryTypes";
 
-import type { AxiosError, AxiosRequestConfig } from "axios";
+import type { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 import axios from "axios";
 
 export const axiosBaseQuery =
@@ -18,12 +18,19 @@ export const axiosBaseQuery =
   > =>
   async ({ url, method, data, params }) => {
     try {
-      const result = await axios({ url: baseUrl + url, method, data, params });
-      const totalCount = +result.headers["x-total-count"];
+      const response: AxiosResponse = await axios({
+        url: baseUrl + url,
+        method,
+        data,
+        params,
+      });
 
-      if (totalCount) return { data: { data: result.data, totalCount } };
-
-      return { data: result.data };
+      return {
+        data: response.data,
+        meta: {
+          headers: response.headers,
+        },
+      };
     } catch (axiosError) {
       const err = axiosError as AxiosError;
       return {

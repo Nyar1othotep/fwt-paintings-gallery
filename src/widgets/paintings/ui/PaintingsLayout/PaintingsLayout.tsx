@@ -29,23 +29,25 @@ export function PaintingsLayout() {
   }
 
   if (isError)
-    return <div>Упс... Что-то пошло не так. Перезагрузите страницу</div>;
+    return <div>Oops... Something went wrong. Please, reload the page.</div>;
 
-  if (Array.isArray(paintings) && paintings.length === 0)
-    return <div>Данных нет. Попробуйте ввести другие фильтры.</div>;
+  if (paintings && paintings.data.length === 0)
+    return <div>There are no results found. Please try another search.</div>;
 
-  if (isPSuccess && isASuccess && isLSuccess) {
-    const mappedPaintings = mapPaintings({
-      paintings: paintings.data,
-      authors,
-      locations,
-    });
-
-    return (
-      <>
-        <PaintingsList paintings={mappedPaintings} />
-        <PagePaginate totalCount={paintings.totalCount} />
-      </>
-    );
+  if (!isPSuccess || !isASuccess || !isLSuccess) {
+    return null;
   }
+
+  return (
+    <>
+      <PaintingsList
+        paintings={mapPaintings({
+          paintings: paintings.data,
+          authors,
+          locations,
+        })}
+      />
+      <PagePaginate totalCount={paintings.totalCount} />
+    </>
+  );
 }

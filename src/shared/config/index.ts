@@ -1,6 +1,8 @@
 const getEnvVar = (key: string) => {
   if (import.meta.env[key] === undefined) {
-    throw new Error(`Env variable ${key} is required`);
+    throw new Error(
+      `Не удалось получить env переменную: ${key}. Возможно, необходимо переименовать .env.example на .env или .env.local`,
+    );
   }
   return import.meta.env[key] || "";
 };
