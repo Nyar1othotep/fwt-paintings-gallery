@@ -34,18 +34,20 @@ export function PaintingsLayout() {
   if (paintings && paintings.data.length === 0)
     return <div>There are no results found. Please try another search.</div>;
 
-  if (isPSuccess && isASuccess && isLSuccess) {
-    const mappedPaintings = mapPaintings({
-      paintings: paintings.data,
-      authors,
-      locations,
-    });
-
-    return (
-      <>
-        <PaintingsList paintings={mappedPaintings} />
-        <PagePaginate totalCount={paintings.totalCount} />
-      </>
-    );
+  if (!isPSuccess || !isASuccess || !isLSuccess) {
+    return null;
   }
+
+  return (
+    <>
+      <PaintingsList
+        paintings={mapPaintings({
+          paintings: paintings.data,
+          authors,
+          locations,
+        })}
+      />
+      <PagePaginate totalCount={paintings.totalCount} />
+    </>
+  );
 }
