@@ -1,13 +1,10 @@
 import cn from "classnames";
 
-// Entities
-import { changeTheme, selectTheme } from "entities/theme";
-
 // Shared
 import { useAppDispatch, useAppSelector } from "shared/lib";
 
-import { ReactComponent as Icon } from "../assets/theme.svg";
-
+import { changeTheme, selectTheme } from "../../model/slice";
+import { ReactComponent as Icon } from "./assets/theme.svg";
 import styles from "./ToggleTheme.module.scss";
 
 interface IToggleTheme {
