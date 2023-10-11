@@ -10,6 +10,7 @@ export function Filters() {
   const dispatch = useAppDispatch();
 
   const handleFilters = (filter: { [key: string]: string | number | null }) => {
+    dispatch(setFilters({ _page: 1 }));
     dispatch(setFilters(filter));
   };
 
