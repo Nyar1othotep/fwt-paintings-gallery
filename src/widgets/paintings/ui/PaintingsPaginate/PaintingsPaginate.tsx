@@ -2,20 +2,20 @@ import Pagination from "react-js-pagination";
 import cn from "classnames";
 
 // Entities
-import { selectFilters, setFilters } from "@/entities/filters";
+import { selectFilters, setFilters } from "@/features/filters";
 
 // Shared
 import { useAppDispatch, useAppSelector } from "@/shared/lib";
 
-import { ReactComponent as IconArrow } from "../assets/arrow.svg";
-import { ReactComponent as IconDoubleArrow } from "../assets/double-arrow.svg";
-import styles from "./PagePaginate.module.scss";
+import { ReactComponent as IconArrow } from "./assets/arrow.svg";
+import { ReactComponent as IconDoubleArrow } from "./assets/double-arrow.svg";
+import styles from "./PaintingsPaginate.module.scss";
 
-interface IPagePaginate {
+interface IPaintingsPaginate {
   totalCount: number;
 }
 
-export function PagePaginate({ totalCount }: IPagePaginate) {
+export function PaintingsPaginate({ totalCount }: IPaintingsPaginate) {
   const dispatch = useAppDispatch();
   const { _page, _limit } = useAppSelector(selectFilters);
 

@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
 
-// Entities
-import { ThemeReducer } from "@/entities/theme";
-import { FiltersReducer } from "@/entities/filters";
+// Features
+import { ThemeReducer } from "@/features/theme";
+import { FiltersReducer } from "@/features/filters";
 
 // Shared
 import { baseApi } from "@/shared/api";

@@ -1,8 +1,7 @@
-// Entities
-import { useGetLocationsQuery } from "@/entities/filters";
-
 // Shared
 import { Select } from "@/shared/ui";
+
+import { useGetLocationsQuery } from "../../api/filtersApi";
 
 interface ISelect {
   initValue?: string;

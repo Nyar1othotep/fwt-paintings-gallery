@@ -1,17 +1,19 @@
-// Entities
-import { useGetPaintingsQuery, mapPaintings } from "@/entities/paintings";
+// Features
 import {
   selectFilters,
   useGetAuthorsQuery,
   useGetLocationsQuery,
-} from "@/entities/filters";
-import { PagePaginate } from "@/features/pagination";
+} from "@/features/filters";
+
+// Entities
+import { useGetPaintingsQuery, mapPaintings } from "@/entities/paintings";
 
 // Shared
 import { useAppSelector } from "@/shared/lib";
 import { Spinner } from "@/shared/ui";
 
 import { PaintingsList } from "../PaintingsList/PaintingsList";
+import { PaintingsPaginate } from "../PaintingsPaginate/PaintingsPaginate";
 
 export function PaintingsLayout() {
   const filters = useAppSelector(selectFilters);
@@ -47,7 +49,7 @@ export function PaintingsLayout() {
           locations,
         })}
       />
-      <PagePaginate totalCount={paintings.totalCount} />
+      <PaintingsPaginate totalCount={paintings.totalCount} />
     </>
   );
 }

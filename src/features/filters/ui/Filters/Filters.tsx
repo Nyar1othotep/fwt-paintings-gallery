@@ -1,9 +1,7 @@
-// Entities
-import { setFilters } from "entities/filters";
-
 // Shared
 import { useAppDispatch } from "shared/lib";
 
+import { setFilters } from "../../model/slice";
 import { filters, filtersMapping } from "../../config/filters";
 import { TFilters } from "../../model/types";
 import styles from "./Filters.module.scss";
